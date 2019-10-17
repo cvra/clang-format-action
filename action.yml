@@ -1,6 +1,6 @@
-name: 'Container Action Template'
-description: 'Get started with Container actions'
-author: 'GitHub'
+name: 'clang-format Code Formatter'
+description: 'Runs clang-format on your source code so your users do not have to'
+author: 'antoinealb'
 inputs: 
   myInput:
     description: 'Input to use'
