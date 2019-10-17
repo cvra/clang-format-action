@@ -19,7 +19,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Node Code Formatter
-      uses: antoinealb/clang-format-action@clang10
+      uses: antoinealb/clang-format-action@clang9
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 ```
