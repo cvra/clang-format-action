@@ -1,5 +1,25 @@
-# Container Action Template
+# Clang format Github action
 
-To get started, click the `Use this template` button on this repository [which will create a new repository based on this template](https://github.blog/2019-06-06-generate-new-repositories-with-repository-templates/).
+This project can be used to run clang-format on every push using Github actions.
 
-For info on how to build your first Container action, see the [toolkit docs folder](https://github.com/actions/toolkit/blob/master/docs/container-action.md).
+## Usage
+
+Usage ✏️
+For a more detailed installation guide look [there](https://github.com/MarvinJWendt/run-node-formatter/wiki)
+
+Create a `formatter.yml` file in `.github/workflows/`.
+Paste this code into the file:
+
+```yml
+on: push
+name: clang-format Code Formatter
+jobs:
+  lint:
+    name: clang-format Code Formatter
+    runs-on: ubuntu-latest
+    steps:
+    - name: Node Code Formatter
+      uses: antoinealb/clang-format-action@clang10
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+```
