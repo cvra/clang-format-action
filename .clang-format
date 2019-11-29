@@ -10,12 +10,12 @@ Cpp11BracedListStyle: 'false'
 DerivePointerAlignment: 'false'
 FixNamespaceComments: 'false'
 IndentCaseLabels: 'false'
-IndentWidth: '1'
+IndentWidth: '2'
 IndentWrappedFunctionNames: 'true'
 Language: Cpp
 NamespaceIndentation: All
 Standard: Auto
-TabWidth: '1'
+TabWidth: '2'
 UseTab: Always
 
 ...
