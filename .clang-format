@@ -10,7 +10,7 @@ Cpp11BracedListStyle: 'false'
 DerivePointerAlignment: 'false'
 FixNamespaceComments: 'false'
 IndentCaseLabels: 'false'
-IndentWidth: '4'
+IndentWidth: '1'
 IndentWrappedFunctionNames: 'true'
 Language: Cpp
 NamespaceIndentation: All
