@@ -16,7 +16,7 @@ echo "### Branch: $BRANCH (ref: $GITHUB_REF )"
 git checkout $BRANCH
 
 echo "## Configuring git author..."
-git config --global user.email "clang-format@1337z.ninja"
+git config --global user.email "clang-format@yeet.io"
 git config --global user.name "Clang Format"
 
 # Ignore workflow files (we may not touch them)
@@ -25,7 +25,7 @@ git update-index --assume-unchanged .github/workflows/*
 echo "## Running clang-format on C/C++ source"
 SRC=$(git ls-tree --full-tree -r HEAD | grep -e "\.\(c\|h\|hpp\|cpp\)\$" | cut -f 2)
 
-clang-format -style=file -i $SRC
+clang-format -style=google -i $SRC
 
 echo "## Commiting files..."
 git commit -a -m "apply clang-format" || true
