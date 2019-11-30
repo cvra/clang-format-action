@@ -15,6 +15,7 @@ IndentWrappedFunctionNames: 'true'
 Language: Cpp
 NamespaceIndentation: All
 Standard: Auto
+SortIncludes: 'false'
 TabWidth: '2'
 UseTab: Always
 
