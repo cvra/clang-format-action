@@ -1,19 +1,14 @@
-FROM ubuntu:18.04
+FROM ubuntu:disco
 
 RUN apt-get update && apt-get install -y \
+        clang-format-8 \
         git \
         jq \
-        wget \
-        xz-utils
+        wget
 
-RUN wget "http://releases.llvm.org/9.0.0/clang+llvm-9.0.0-x86_64-linux-gnu-ubuntu-18.04.tar.xz" -O clang.tar.xz && \
-    tar xf clang.tar.xz && \
-    cd clang* && \
-    cp -R * /usr/local
+RUN ln -s $(which clang-format-8) /bin/clang-format
 
 COPY LICENSE README.md /
-
-COPY .clang-format /.clang-format
 
 COPY entrypoint.sh /entrypoint.sh
 
